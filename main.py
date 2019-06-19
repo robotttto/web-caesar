@@ -2,7 +2,7 @@ from flask import Flask, request
 from caesar import rotate_string
 
 app = Flask(__name__)
-app.config ['DBUG'] = True
+app.config ['DEBUG'] = True
 
 form = """
 <!DOCTYPE html>
@@ -54,7 +54,7 @@ def encrypt():
 
     
     message = rotate_string(msg, rots)
-    return '<h1>message</h1>'
+    return '<h1>'+message+'</h1>'
 
 app.run()
 
